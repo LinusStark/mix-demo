@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface Model : NSObject
+@property (nonatomic,strong)NSArray * modelData;
 
+
+- (void)setNameWithData:(NSDictionary*)nameData;
 @end

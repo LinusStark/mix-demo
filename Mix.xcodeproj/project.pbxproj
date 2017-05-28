@@ -15,6 +15,9 @@
 		15F0CAE01EDA8F0000859800 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15F0CADE1EDA8F0000859800 /* LaunchScreen.storyboard */; };
 		15F0CAEB1EDA8F0000859800 /* MixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F0CAEA1EDA8F0000859800 /* MixTests.m */; };
 		15F0CAF61EDA8F0000859800 /* MixUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F0CAF51EDA8F0000859800 /* MixUITests.m */; };
+		15F0CB051EDA8F5000859800 /* confuse.sh in Resources */ = {isa = PBXBuildFile; fileRef = 15F0CB031EDA8F5000859800 /* confuse.sh */; };
+		15F0CB061EDA8F5000859800 /* func.list in Resources */ = {isa = PBXBuildFile; fileRef = 15F0CB041EDA8F5000859800 /* func.list */; };
+		15F0CB0C1EDA91E200859800 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F0CB0B1EDA91E200859800 /* Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		15F0CAF11EDA8F0000859800 /* MixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15F0CAF51EDA8F0000859800 /* MixUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MixUITests.m; sourceTree = "<group>"; };
 		15F0CAF71EDA8F0000859800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15F0CB031EDA8F5000859800 /* confuse.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = confuse.sh; sourceTree = "<group>"; };
+		15F0CB041EDA8F5000859800 /* func.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = func.list; sourceTree = "<group>"; };
+		15F0CB081EDA8FEF00859800 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		15F0CB0A1EDA91E200859800 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		15F0CB0B1EDA91E200859800 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,8 @@
 		15F0CAC41EDA8F0000859800 = {
 			isa = PBXGroup;
 			children = (
+				15F0CB031EDA8F5000859800 /* confuse.sh */,
+				15F0CB041EDA8F5000859800 /* func.list */,
 				15F0CACF1EDA8F0000859800 /* Mix */,
 				15F0CAE91EDA8F0000859800 /* MixTests */,
 				15F0CAF41EDA8F0000859800 /* MixUITests */,
@@ -101,10 +111,13 @@
 		15F0CACF1EDA8F0000859800 /* Mix */ = {
 			isa = PBXGroup;
 			children = (
+				15F0CB071EDA8FD900859800 /* PrefixHeader */,
 				15F0CAD31EDA8F0000859800 /* AppDelegate.h */,
 				15F0CAD41EDA8F0000859800 /* AppDelegate.m */,
 				15F0CAD61EDA8F0000859800 /* ViewController.h */,
 				15F0CAD71EDA8F0000859800 /* ViewController.m */,
+				15F0CB0A1EDA91E200859800 /* Model.h */,
+				15F0CB0B1EDA91E200859800 /* Model.m */,
 				15F0CAD91EDA8F0000859800 /* Main.storyboard */,
 				15F0CADC1EDA8F0000859800 /* Assets.xcassets */,
 				15F0CADE1EDA8F0000859800 /* LaunchScreen.storyboard */,
@@ -140,6 +153,14 @@
 			path = MixUITests;
 			sourceTree = "<group>";
 		};
+		15F0CB071EDA8FD900859800 /* PrefixHeader */ = {
+			isa = PBXGroup;
+			children = (
+				15F0CB081EDA8FEF00859800 /* PrefixHeader.pch */,
+			);
+			path = PrefixHeader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +171,7 @@
 				15F0CAC91EDA8F0000859800 /* Sources */,
 				15F0CACA1EDA8F0000859800 /* Frameworks */,
 				15F0CACB1EDA8F0000859800 /* Resources */,
+				15F0CB091EDA90E700859800 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -244,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				15F0CAE01EDA8F0000859800 /* LaunchScreen.storyboard in Resources */,
+				15F0CB061EDA8F5000859800 /* func.list in Resources */,
 				15F0CADD1EDA8F0000859800 /* Assets.xcassets in Resources */,
+				15F0CB051EDA8F5000859800 /* confuse.sh in Resources */,
 				15F0CADB1EDA8F0000859800 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +289,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15F0CB091EDA90E700859800 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = $PROJECT_DIR/confuse.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		15F0CAC91EDA8F0000859800 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -273,6 +313,7 @@
 				15F0CAD81EDA8F0000859800 /* ViewController.m in Sources */,
 				15F0CAD51EDA8F0000859800 /* AppDelegate.m in Sources */,
 				15F0CAD21EDA8F0000859800 /* main.m in Sources */,
+				15F0CB0C1EDA91E200859800 /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +456,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Mix/PrefixHeader/PrefixHeader.pch";
 				INFOPLIST_FILE = Mix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.linus.mix.Mix;
@@ -426,6 +469,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Mix/PrefixHeader/PrefixHeader.pch";
 				INFOPLIST_FILE = Mix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.linus.mix.Mix;

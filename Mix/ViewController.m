@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Model.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    Model *model = [[Model alloc]init];
+    
+    [model setNameWithData:nil];
+    model.modelData = [NSArray array];
+    
 }
 
 - (void)didReceiveMemoryWarning {

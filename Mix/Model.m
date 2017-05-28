@@ -8,6 +8,16 @@
 
 #import "Model.h"
 
+@interface Model()
+
+@end
+
 @implementation Model
+- (void)setNameWithData:(NSDictionary*)nameData;
+{
+    NSLog(@"1111");
+}
+
+
 
 @end
